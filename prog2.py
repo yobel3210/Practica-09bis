@@ -13,16 +13,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot(x, y):
-	plt.title("Gráfica de y = 1/2 * x^2 + 1")
-	plt.scatter(x, y, color="green", marker=".")
+	plt.title("Gráfica de e^(-x) * cos(2πx)")
+	plt.plot(x, y, "--", color="orange")
 	plt.xlabel("Valores de x")
 	plt.ylabel("Valores de y")
 	plt.grid()
 	plt.show()
 
 def get_data():
-	x = np.linspace(-10, 10, 100)
-	y = 0.5 * x**2 + 1
+	x = np.linspace(-10, 5, 100)
+	y = np.exp(-x) * np.cos(2 * np.pi * x)
 	return x, y
 
 def main():
