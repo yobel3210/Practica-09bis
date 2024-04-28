@@ -12,22 +12,22 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plot(t, s):
+def plot(x, y):
 	plt.title("Gráfica de y = 1/2 * x^2 + 1")
-	plt.scatter(t, s, color="green", marker=".")
-	plt.xlabel("Valores de t")
+	plt.scatter(x, y, color="green", marker=".")
+	plt.xlabel("Valores de x")
 	plt.ylabel("Valores de y")
 	plt.grid()
 	plt.show()
 
 def get_data():
-	t = np.linspace(-10, 10, 100) # 0 a 12.64 / 100: 0, 0.1264, 0.2528 ... 12.64
-	s = 0.5 * t**2 + 1
-	return t, s
+	x = np.linspace(-10, 10, 100)
+	y = 0.5 * x**2 + 1
+	return x, y
 
 def main():
-	t, s= get_data()
-	plot(t, s)
+	x, y= get_data()
+	plot(x, y)
 
 if __name__ == '__main__':
 	main()
