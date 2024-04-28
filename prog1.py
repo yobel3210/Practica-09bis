@@ -3,7 +3,7 @@
 # ## ###############################################################
 # prog1.py
 #
-# Author: Mauricio Matamoros
+# Author: Yobel Dolores
 # License: MIT
 #
 # Finds the largest number of those provided by the user
@@ -26,7 +26,7 @@ def main(argv):
 	while n:
 		numbers.append(n)
 		n = read_int()
-	print("El elemento más grande es:", max(numbers) )
+	print("El elemento más pequeño es:", hex(min(numbers)) )
 
 if __name__ == '__main__':
 	main(sys.argv)
