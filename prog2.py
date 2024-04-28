@@ -3,7 +3,7 @@
 # ## ###############################################################
 # prog2.py
 #
-# Author: Mauricio Matamoros
+# Author: modified by: Yobel Dolores
 # License: MIT
 #
 # Plots the sin and cos functions
@@ -12,24 +12,22 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plot(t, s, c):
-	plt.title("Seno y coseno" )
-	plt.plot(t, s, "-", color="orange")
-	plt.plot(t, c, "b-")
-	plt.legend(["y = cos(t)", "y = sin(t)"])
+def plot(t, s):
+	plt.title("Gráfica de y = 1/2 * x^2 + 1")
+	plt.scatter(t, s, color="green", marker=".")
 	plt.xlabel("Valores de t")
 	plt.ylabel("Valores de y")
+	plt.grid()
 	plt.show()
 
 def get_data():
-	t = np.linspace(0, 4*np.pi, 100) # 0 a 12.64 / 100: 0, 0.1264, 0.2528 ... 12.64
-	s = np.sin(t)
-	c = np.cos(t)
-	return t, s, c
+	t = np.linspace(-10, 10, 100) # 0 a 12.64 / 100: 0, 0.1264, 0.2528 ... 12.64
+	s = 0.5 * t**2 + 1
+	return t, s
 
 def main():
-	t, s, c = get_data()
-	plot(t, s, c)
+	t, s= get_data()
+	plot(t, s)
 
 if __name__ == '__main__':
 	main()
