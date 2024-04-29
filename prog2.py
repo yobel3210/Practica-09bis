@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 def plot(x, y):
 	plt.title("Gráfica de y = 1/2 * x^2 + 1")
-	plt.scatter(x, y, color="green", marker=".")
+	plt.plot(x, y, "go")
 	plt.xlabel("Valores de x")
 	plt.ylabel("Valores de y")
 	plt.grid()
